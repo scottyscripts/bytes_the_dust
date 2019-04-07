@@ -12,14 +12,18 @@ class BTD::Converter
   end
 
   def binary_to_text(binary)
+    text_str = ''
     binary.split(' ').each do |byte|
-      print byte.to_i(2).chr
+      text_str += byte.to_i(2).chr
     end
+    text_str
   end
 
   def text_to_binary(text)
+    binary_str = ''
     text.each_byte do |byte|
-      print "#{byte.to_s(2)} "
+      binary_str += "#{byte.to_s(2)} "
     end
+    binary_str.rstrip
   end
 end
