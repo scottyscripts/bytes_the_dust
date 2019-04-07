@@ -6,7 +6,10 @@ Gem::Specification.new do |s|
   s.description = 'Convert strings to binary! See the bytes behind the things you type. Become happy you don\'t have to type in 1\'s and 0\'s.'
   s.authors = ['Scott Davidson']
   s.email = 'scottyscripts@gmail.com'
-  s.files = ['lib/btd.rb']
+  s.files = [
+    'lib/btd.rb',
+    'lib/btd/converter.rb'
+  ]
   s.homepage = 'https://rubygems.org/gems/btd'
   s.license = 'MIT'
   s.post_install_message = 'Another one bytes the dust!'
