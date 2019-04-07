@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 
 require 'btd'
-puts BTD.run(ARGV[0], ARGV[1])
+puts BTD.run(ARGV.join(' '))

@@ -1,13 +1,16 @@
 class BTD::Converter
-  def initialize(input_type)
-    @input_type = input_type
+  BINARY_REGEX = /^[0-1]+?$/
+
+  def initialize(input)
+    @input = input
+    @input_type = determine_input_type(input)
   end
 
-  def convert(input)
+  def convert
     if @input_type == 'binary'
-      binary_to_text(input)
+      binary_to_text(@input)
     else
-      text_to_binary(input)
+      text_to_binary(@input)
     end
   end
 
@@ -25,5 +28,14 @@ class BTD::Converter
       binary_str += "#{byte.to_s(2)} "
     end
     binary_str.rstrip
+  end
+
+  private
+  def determine_input_type(input)
+    if BINARY_REGEX.match?(input.delete(' '))
+      'binary'
+    else
+      'text'
+    end
   end
 end
