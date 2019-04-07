@@ -1,7 +1,7 @@
 class BTD
   def self.run(input)
     converter = BTD::Converter.new(input)
-    print converter.convert
+    converter.convert
   end
 end
 
