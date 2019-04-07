@@ -1,7 +1,7 @@
-require 'btd/converter'
-
 class BTD
-  def self.convert
-    puts "Another one bytes the dust."
+  def self.convert(input_type)
+    converter = BTD::Converter.new(input_type)
   end
 end
+
+require 'btd/converter'
