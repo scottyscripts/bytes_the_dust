@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
 
 require 'btd'
+abort('Pass text / binary to convert as argument(s)') if ARGV.empty?
 puts BTD.run(ARGV.join(' '))
